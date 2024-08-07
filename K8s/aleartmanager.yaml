@@ -60,7 +60,7 @@ data:
       smtp_smarthost: 'smtp.gmail.com:587'
       smtp_from: 'prasanna.pailwan35@gmail.com'
       smtp_auth_username: 'prasanna.pailwan35@gmail.com'
-      smtp_auth_password: 'ypugqpwaadpexzbj'
+      smtp_auth_password: ''
       smtp_require_tls: true
 
     receivers:
