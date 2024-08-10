@@ -1,0 +1,11 @@
+groups:
+  - name: stock_alerts
+    rules:
+      - alert: StockPercentageChangeHigh
+        expr: stock_percentage_change > 1
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Stock percentage change is high"
+          description: "The stock {{ $labels.stock_symbol }} has changed by more than 1%"
