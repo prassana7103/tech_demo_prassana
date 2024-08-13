@@ -1,14 +1,14 @@
 backend:
   image:
     repository: prassana1132/my_django_app
-    tag: apline2
+    tag: {{ .Values.backendTag | quote }}
   service:
     nodePort: 30001
 
 frontend:
   image:
     repository: prassana1132/my_next_app
-    tag: alpine1
+    tag: {{ .Values.frontendTag | quote }}
   service:
     nodePort: 30000
 
