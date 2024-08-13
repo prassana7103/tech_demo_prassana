@@ -2,6 +2,7 @@ CREATE DATABASE IF NOT EXISTS stock_db;
 
 USE stock_db;
 
+
 CREATE TABLE IF NOT EXISTS stock_data_stocklist (
     id INT PRIMARY KEY,
     symbol VARCHAR(10)
