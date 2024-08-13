@@ -1,0 +1,5 @@
+image:
+  repository: prassana1132/mysql-stock-db
+
+storage:
+  size: 1Gi

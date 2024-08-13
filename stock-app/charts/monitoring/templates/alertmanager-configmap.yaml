@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: alertmanager-config
+data:
+  alertmanager.yml: |
+    global:
+      smtp_smarthost: 'smtp.gmail.com:587'
+      smtp_from: 'prasanna.pailwan35@gmail.com'
+      smtp_auth_username: 'prasanna.pailwan35@gmail.com'
+      smtp_auth_password: 'ypugqpwaadpexzbj'
+      smtp_require_tls: true
+
+    receivers:
+      - name: 'email_notifications'
+        email_configs:
+          - to: 'prassanapailwan@gmail.com'
+            send_resolved: true
+
+    route:
+      receiver: 'email_notifications'
+      group_by: ['alertname']
+      group_wait: 30s
+      group_interval: 5m
+      repeat_interval: 3h

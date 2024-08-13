@@ -1,3 +1,50 @@
+backend:
+  image:
+    repository: prassana1132/my_django_app
+    tag: apline2
+  service:
+    nodePort: 30001
+
+frontend:
+  image:
+    repository: prassana1132/my_next_app
+    tag: alpine1
+  service:
+    nodePort: 30000
+
+database:
+  image:
+    repository: prassana1132/mysql-stock-db
+  storage:
+    size: 1Gi
+
+monitoring:
+  prometheus:
+    nodePort: 30900
+  alertmanager:
+    nodePort: 31002
+  smtp:
+    smarthost: 'smtp.gmail.com:587'
+    from: 'prasanna.pailwan35@gmail.com'
+    username: 'prasanna.pailwan35@gmail.com'
+    password: 'ypugqpwaadpexzbj'
+    to: 'prassanapailwan@gmail.com'
+
+backend:
+  serviceIP: "192.168.105.5"
+  nodePort: 30001
+
+alertmanager:
+  serviceIP: "192.168.105.5"
+  nodePort: 31002
+
+service:
+  port: 80
+
+serviceAccount:
+  create: true
+
+
 # Default values for stockapp.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
@@ -105,39 +152,3 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
-
-
-frontend:
-  image:
-    repository: prassana1132/my_next_app
-    tag: 1
-  service:
-    type: NodePort
-    port: 3000
-    nodePort: 30000
-  replicas: 1
-
-backend:
-  image:
-    repository: prassana1132/my_django_app
-    tag: 2
-  service:
-    type: NodePort
-    port: 8000
-    nodePort: 30001
-  replicas: 1
-
-database:
-  image:
-    repository: prassana1132/mysql-stock-db
-  service:
-    port: 3306
-  persistentVolume:
-    size: 1Gi
-  persistentVolumeClaim:
-    size: 1Gi
-
-
-alertmanager:
-  service:
-    nodePort: 31002
