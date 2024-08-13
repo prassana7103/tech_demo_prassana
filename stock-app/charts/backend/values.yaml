@@ -1,6 +1,7 @@
 image:
   repository: prassana1132/my_django_app
-  tag: latest11
+  tag: {{ .Values.backendTag | quote }}
+
 
 service:
   nodePort: 30001
