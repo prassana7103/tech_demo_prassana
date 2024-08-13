@@ -7,9 +7,6 @@
 │   │   ├── DailyStockTable.js
 │   │   ├── MonthlyYearlyStockTable.js
 │   │   ├── Navbar.css
-
-
-
 │   │   ├── Navbar.js
 │   │   ├── StockItem.js
 │   │   ├── StockReport.js
