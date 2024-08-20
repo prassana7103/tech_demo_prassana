@@ -11,8 +11,8 @@
   "dependencies": {
     "axios": "^1.7.3",
     "jwt-decode": "^4.0.0",
-    "jspdf": "^2.5.1",       // Add this line
-    "jspdf-autotable": "^3.5.21",  // Add this line
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.5.21",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18"
