@@ -18358,4 +18358,4 @@
 ├── tree.txt
 └── tsconfig.json
 
-1756 directories, 16603 files
+1756 directories, 16603 file
