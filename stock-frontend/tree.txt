@@ -234,7 +234,7 @@
 │   │   ├── eslint-plugin-next
 │   │   │   ├── README.md
 │   │   │   ├── dist
-│   │   │   │   ├── index.js
+│   │   │   │   ├── index.jsss
 │   │   │   │   ├── rules
 │   │   │   │   │   ├── google-font-display.js
 │   │   │   │   │   ├── google-font-preconnect.js
