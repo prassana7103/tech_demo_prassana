@@ -1,6 +1,6 @@
 image:
   repository: prassana1132/my_next_app
-  tag: {{ .Values.frontendTag | quote }}
+  tag: "default-frontend-tag"
 
 service:
   nodePort: 30000
