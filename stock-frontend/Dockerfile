@@ -1,7 +1,6 @@
 # Stage 1: Build the Next.js application
 FROM node:18-alpine as builder
 
-
 # Set the working directory
 WORKDIR /app
 
@@ -28,9 +27,7 @@ WORKDIR /app
 
 # Copy only the necessary files from the builder stage
 COPY --from=builder /app/.next ./.next
-
-# Use shell command to copy the public directory if it exists
-RUN if [ -d /app/public ]; then cp -r /app/public ./public; fi
+COPY --from=builder /app/public ./public
 
 # Copy package.json and install only production dependencies
 COPY --from=builder /app/package.json ./package.json
