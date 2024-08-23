@@ -96,7 +96,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'stock_monitoring.wsgi.application'
 
 # Database
-DATABASES = {
+# DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
 #         'NAME': config('DATABASE_NAME'),
