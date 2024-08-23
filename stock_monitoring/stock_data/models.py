@@ -11,7 +11,6 @@ class Stock(models.Model):
     volume = models.BigIntegerField()
     change_in_percent = models.FloatField()
     change_in_price = models.FloatField()
-    change_price = models.FloatField(default=11.32)
 
 
     class Meta:
