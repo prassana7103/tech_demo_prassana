@@ -97,16 +97,26 @@ WSGI_APPLICATION = 'stock_monitoring.wsgi.application'
 
 # Database
 DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': config('DATABASE_NAME'),
+#         'USER': config('DATABASE_USER'),
+#         'PASSWORD': config('DATABASE_PASSWORD'),
+#         'HOST': config('DATABASE_HOST'),
+#         'PORT': config('DATABASE_PORT'),
+#     }
+# }
+
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': config('DATABASE_NAME'),
-        'USER': config('DATABASE_USER'),
-        'PASSWORD': config('DATABASE_PASSWORD'),
-        'HOST': config('DATABASE_HOST'),
-        'PORT': config('DATABASE_PORT'),
+        'NAME': "stock_db",
+        'USER': "root",
+        'PASSWORD': "1132",
+        'HOST': "mysql-service",
+        'PORT': "3306",
     }
 }
-
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
     {
