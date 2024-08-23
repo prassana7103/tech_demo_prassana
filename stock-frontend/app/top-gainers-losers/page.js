@@ -10,7 +10,7 @@ const TopGainersLosersPage = async () => {
   try {
     const token = localStorage.getItem('access_token'); 
 
-    const res = await axios.get('http://192.168.105.5:30001/stock_data/report/', {
+    const res = await axios.get('http://192.168.105.6:30001/stock_data/report/', {
       headers: {
         'Authorization': `Bearer ${token}`
       }

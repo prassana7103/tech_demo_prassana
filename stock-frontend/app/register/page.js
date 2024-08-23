@@ -17,7 +17,7 @@ export default function RegisterPage() {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://192.168.105.5:30001/api/auth/register/', {
+      await axios.post('http://192.168.105.6:30001/api/auth/register/', {
         username,
         password,
         email,

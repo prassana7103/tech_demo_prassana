@@ -22,7 +22,7 @@ const DailyStockPage = () => {
       setLoading(true);
       const token = localStorage.getItem('access_token');
 
-      const res = await axios.get(`http://192.168.105.5:30001/stock_data/report/?is_fav=${isFavorite}`, {
+      const res = await axios.get(`http://192.168.105.6:30001/stock_data/report/?is_fav=${isFavorite}`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }

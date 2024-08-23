@@ -17,10 +17,10 @@ const StockListPage = () => {
         const token = localStorage.getItem('access_token');
 
         const [stocksRes, favoritesRes] = await Promise.all([
-          axios.get('http://192.168.105.5:30001/stock_data/liststocks/', {
+          axios.get('http://192.168.105.6:30001/stock_data/liststocks/', {
             headers: { 'Authorization': `Bearer ${token}` }
           }),
-          axios.get(`http://192.168.105.5:30001/stock_data/user_stock/`, {
+          axios.get(`http://192.168.105.6:30001/stock_data/user_stock/`, {
             headers: { 'Authorization': `Bearer ${token}` }
           })
         ]);
@@ -45,13 +45,13 @@ const StockListPage = () => {
 
       if (favorites.includes(stockId)) {
         // Remove from favorites
-        await axios.delete(`http://192.168.105.5:30001/stock_data/user_stock_delete/${stockId}/`, {
+        await axios.delete(`http://192.168.105.6:30001/stock_data/user_stock_delete/${stockId}/`, {
           headers: { 'Authorization': `Bearer ${token}` }
         });
         setFavorites(favorites.filter(id => id !== stockId));
       } else {
         // Add to favorites
-        await axios.post('http://192.168.105.5:30001/stock_data/user_stocks/create_by_list/', 
+        await axios.post('http://192.168.105.6:30001/stock_data/user_stocks/create_by_list/', 
           { stock_ids: [stockId] },
           { headers: { 'Authorization': `Bearer ${token}` } }
         );
