@@ -11,7 +11,7 @@ export default function Navbar() {
       <Link href="/monthly">Monthly Data</Link>
       <Link href="/yearly">Yearly Data</Link>
       <Link href="/top-gainers-losers">Top Gainers/Losers</Link>
-      {/* <Link href="/stocklist">All Stocks</Link> */}
+      <Link href="/stocklist">All Stocks</Link>
       <LogoutButton /> {/* Add the Logout button */}
     </nav>
   );
