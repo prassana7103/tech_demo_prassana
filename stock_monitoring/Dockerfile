@@ -27,6 +27,7 @@
 
 # # Make migrations and start the Django server
 # CMD ["sh", "-c", "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"]
+# Use the official Python image from the Docker Hub
 FROM python:3.10-alpine
 
 # Set the working directory in the container
@@ -63,5 +64,6 @@ RUN echo "*/2 * * * * cd /app && /usr/local/bin/python manage.py fetch_stock_dat
 EXPOSE 8000
 
 # Make migrations and start the Django server
-CMD ["sh", "-c", "python manage.py migrate && crond && python manage.py runserver 0.0.0.0:8000"]
+CMD ["sh", "-c", "python manage.py makemigrations && python manage.py migrate && crond && python manage.py runserver 0.0.0.0:8000"]
+
 
